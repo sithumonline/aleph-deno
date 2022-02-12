@@ -27,7 +27,7 @@ jobs:
 
       - name: Build site
         env:
-          - URL: https://oak-deno.deno.dev
+          URL: https://oak-deno.deno.dev
         run: deno run -A https://deno.land/x/aleph@v0.3.0-beta.19/cli.ts build
 
       - name: Deploy to Deno Deploy
