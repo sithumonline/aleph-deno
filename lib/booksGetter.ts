@@ -11,7 +11,7 @@ interface BookSchema {
 export function booksGetter(): BookSchema[] {
   const [books, setBooks] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3030/api/books")
+    fetch(`${localStorage.getItem("url")}/api/books`)
       .then((resp) => resp.json().catch(() => ({})))
       .then((books) => {
         setBooks(books.msg);
